@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BOYAA Inc. - Home</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100 font-sans">
+    <!-- Navbar -->
+    <nav class="bg-green-600 p-4 shadow-md">
+        <div class="container mx-auto flex justify-between items-center">
+            <a href="index.html" class="text-white text-2xl font-bold">BOYAA Inc.</a>
+            <ul class="flex space-x-4">
+                <li><a href="mancom.html" class="text-white hover:text-gray-200">Mancom</a></li>
+                <li><a href="history.html" class="text-white hover:text-gray-200">History</a></li>
+                <li><a href="reservation.html" class="text-white hover:text-gray-200">Reservation</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="bg-green-700 text-white py-20">
+        <div class="container mx-auto text-center">
+            <h1 class="text-4xl font-bold mb-4">Welcome to BOYAA Inc.</h1>
+            <p class="text-xl">Text here</p>
+        </div>
+    </section>
+
+    <!-- Mission and Vision -->
+    <section class="container mx-auto py-10">
+        <h2 class="text-3xl font-bold text-center mb-6">Mission and Vision</h2>
+        <p class="text-lg text-center">Text here</p>
+    </section>
+
+    <!-- Programs -->
+    <section class="bg-gray-200 py-10">
+        <div class="container mx-auto">
+            <h2 class="text-3xl font-bold text-center mb-6">Our Programs</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="text-xl font-semibold mb-2">Grassroots Development</h3>
+                    <p>Text here</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="text-xl font-semibold mb-2">Community Outreach</h3>
+                    <p>Text here</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="text-xl font-semibold mb-2">Sports Awareness</h3>
+                    <p>Text here</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Photo Gallery (Placeholder) -->
+    <section class="container mx-auto py-10">
+        <h2 class="text-3xl font-bold text-center mb-6">Photo Gallery</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+            <div class="bg-gray-300 h-48 rounded-lg"></div>
+            <div class="bg-gray-300 h-48 rounded-lg"></div>
+            <div class="bg-gray-300 h-48 rounded-lg"></div>
+        </div>
+        <p class="text-center mt-4">Stay tuned for photos from our events!</p>
+    </section>
+
+    <!-- Basketball Shooting Game -->
+    <section class="container mx-auto py-10">
+        <h2 class="text-3xl font-bold text-center mb-6">Basketball Shooting Game</h2>
+        <div class="flex justify-center">
+            <div class="bg-white p-6 rounded-lg shadow-md">
+                <canvas id="gameCanvas" width="400" height="300" class="border border-green-600"></canvas>
+                <div class="text-center mt-4">
+                    <p id="score" class="text-lg font-semibold">Score: 0</p>
+                    <div class="flex justify-center space-x-4 mt-2">
+                        <button id="shootButton" class="bg-green-600 text-white p-2 rounded hover:bg-green-700">Shoot!</button>
+                        <button id="resetButton" class="bg-blue-600 text-white p-2 rounded hover:bg-blue-700">Reset</button>
+                    </div>
+                    <p id="feedback" class="mt-2 text-gray-700"></p>
+                </div>
+            </div>
+        </div>
+        <p class="text-center mt-4">Click or drag the ball to shoot and score!</p>
+    </section>
+
+    <!-- Social Media -->
+    <section class="bg-green-600 text-white py-10">
+        <div class="container mx-auto text-center">
+            <h2 class="text-3xl font-bold mb-6">Connect With Us</h2>
+            <div class="flex justify-center space-x-4">
+                <a href="https://www.facebook.com/@boyaatvofficial" class="text-white hover:text-gray-200"><i class="fab fa-facebook-f"></i> Facebook</a>
+                <a href="https://www.youtube.com/@boyaatv" class="text-white hover:text-gray-200"><i class="fab fa-youtube"></i> YouTube</a>
+                <a href="https://www.instagram.com/boyaatv" class="text-white hover:text-gray-200"><i class="fab fa-instagram"></i> Instagram</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-4">
+        <div class="container mx-auto text-center">
+            <p>© 2025 BOYAA Inc. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Font Awesome for Social Media Icons -->
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <!-- Game Script -->
+    <script src="game.js"></script>
+</body>
+</html>
