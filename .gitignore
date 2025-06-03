@@ -2,3 +2,4 @@ node_modules
 *.json
 # Except specific JSON files if needed
 !gallery_metadata.json
+.vercel
