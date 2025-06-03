@@ -1,5 +1,6 @@
 body {
     font-family: 'Poppins', sans-serif;
+    color: #333; /* Default text color */
 }
 
 /* Hero section */
@@ -10,12 +11,30 @@ body {
     background-repeat: no-repeat;
     display: flex;
     align-items: center;
+    position: relative; /* Needed for overlay */
+}
+
+/* Overlay for hero section to make text more readable */
+.hero-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.4); /* Dark overlay */
+    z-index: 1;
+}
+
+.hero-section > .container {
+    position: relative; /* Bring content above overlay */
+    z-index: 2;
 }
 
 /* Text shadows for hero section content */
 .hero-section h1,
 .hero-section p {
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.9); /* Stronger shadow */
 }
 
 /* Fade-in animation for hero section */
@@ -76,4 +95,151 @@ body {
 .btn:hover {
     transform: scale(1.05);
     transition: transform 0.3s ease;
+}
+
+/* Reservation Page Specific Styles */
+.reservation-hero {
+    background-image: url('../assets/reservation-banner.jpg'); /* Ensure this path is correct */
+}
+
+.reservation-form-section {
+    background-color: #f8f9fa; /* Light background for the form area */
+    border: 1px solid #e9ecef;
+}
+
+.booking-button {
+    background-color: #28a745; /* A more vibrant green */
+    border-color: #28a745;
+    transition: all 0.3s ease;
+}
+
+.booking-button:hover {
+    background-color: #218838; /* Darker green on hover */
+    border-color: #1e7e34;
+    transform: translateY(-2px) scale(1.02); /* Slight lift and scale */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Flatpickr Calendar Styling */
+.flatpickr-calendar {
+    font-family: 'Poppins', sans-serif;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    border: none;
+}
+
+.flatpickr-day.selected, .flatpickr-day.selected:hover, .flatpickr-day.startRange, .flatpickr-day.startRange:hover, .flatpickr-day.endRange, .flatpickr-day.endRange:hover {
+    background: #198754; /* Bootstrap success color */
+    border-color: #198754;
+}
+
+.flatpickr-day.today {
+    border-color: #198754;
+    color: #198754;
+}
+
+.flatpickr-day.today:hover {
+    background: #e6ffe6;
+}
+
+.flatpickr-day.inRange {
+    background: #d4edda;
+    border-color: #d4edda;
+}
+
+.flatpickr-day.inRange:hover {
+    background: #c3e6cb;
+    border-color: #c3e6cb;
+}
+
+.flatpickr-months .flatpickr-prev-month, .flatpickr-months .flatpickr-next-month {
+    color: #198754;
+}
+
+.flatpickr-months .flatpickr-month {
+    background-color: #198754;
+    color: white;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+.flatpickr-current-month .flatpickr-monthDropdown-months .flatpickr-month-select {
+    color: #000; /* For better readability on calendar */
+}
+
+/* Confirmation message styling */
+#bookingConfirmation {
+    background-color: #eafbea; /* Light green background */
+    border: 1px solid #cce5d1;
+    color: #155724; /* Dark green text */
+}
+
+#bookingConfirmation h3 {
+    color: #0c6a23; /* Even darker green for heading */
+}
+
+#bookingConfirmation ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+#bookingConfirmation ul li strong {
+    color: #155724;
+}
+
+/* Optional: Add a subtle animation to the confirmation message when it appears */
+#bookingConfirmation.show {
+    animation: slideInUp 0.5s ease-out forwards;
+}
+
+@keyframes slideInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Time Slot Buttons Styling */
+.time-slot-btn {
+    background-color: #e0f2f7; /* Light blue for available slots */
+    color: #007bff; /* Blue text */
+    border: 1px solid #cce5ff;
+    padding: 0.75rem 1.25rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    font-weight: 600;
+    min-width: 120px; /* Ensures consistent size */
+    text-align: center;
+}
+
+.time-slot-btn:hover {
+    background-color: #cce5ff; /* Lighter blue on hover */
+    box-shadow: 0 4px 8px rgba(0, 123, 255, 0.2);
+    transform: translateY(-2px);
+}
+
+.time-slot-btn.selected-slot {
+    background-color: #198754; /* Success green when selected */
+    color: white;
+    border-color: #198754;
+    box-shadow: 0 4px 8px rgba(25, 135, 84, 0.3);
+}
+
+.time-slot-btn.unavailable-slot {
+    background-color: #f8d7da; /* Light red for unavailable slots */
+    color: #dc3545; /* Red text */
+    border: 1px solid #f5c6cb;
+    cursor: not-allowed;
+    opacity: 0.7;
+    text-decoration: line-through;
+}
+
+.time-slot-btn.unavailable-slot:hover {
+    transform: none; /* No hover effect for unavailable */
+    box-shadow: none;
 }
