@@ -1,0 +1,52 @@
+[
+    {
+        "position": "President",
+        "name": "Vill Asuncion",
+        "photo": "assets/logo.png"
+    },
+    {
+        "position": "VP for Internal Affairs and Logistics",
+        "name": "Ocay Alcantara",
+        "photo": "assets/logo.png"
+    },
+    {
+        "position": "VP for External Affairs and Marketing",
+        "name": "Ozar Cordeta",
+        "photo": "assets/logo.png"
+    },
+    {
+        "position": "VP and Commissioner for Basketball Operations",
+        "name": "Boyet Balacania",
+        "photo": "assets/logo.png"
+    },
+    {
+        "position": "Chief Finance Officer",
+        "name": "Eduardo Balacania",
+        "photo": "assets/logo.png"
+    },
+    {
+        "position": "Chief Auditor",
+        "name": "Jing Irabagon",
+        "photo": "assets/logo.png"
+    },
+    {
+        "position": "AVP and Asst Commissioner for Basketball Operations for Kids",
+        "name": "Bateng Joves",
+        "photo": "assets/logo.png"
+    },
+    {
+        "position": "VP and Commissioner for Volleyball Operations",
+        "name": "Zenki Sacedon",
+        "photo": "assets/logo.png"
+    },
+    {
+        "position": "VP for Social Media Handling",
+        "name": "Marielle Angelene Atienza",
+        "photo": "assets/logo.png"
+    },
+    {
+        "position": "Secretary and AVP for Social Media Handling",
+        "name": "Jan Paula Generoso",
+        "photo": "assets/logo.png"
+    }
+]
